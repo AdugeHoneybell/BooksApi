@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 
+//  create a builder for the web application using the provided command-line arguments.
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
