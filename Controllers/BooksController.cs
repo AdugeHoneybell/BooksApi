@@ -1,5 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BooksApi.Infrastructure;
 using BooksApi.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BooksApi.Controllers;
 
@@ -7,14 +8,21 @@ namespace BooksApi.Controllers;
 [Route("api/[controller]")]
 public class BooksController : ControllerBase
 {
-    private static List<Book> books = new();
+    // The controller uses dependency injection to get an instance of the AppDbContext.
+    private readonly AppDbContext _context;
+
+
+    public BooksController(AppDbContext context)
+    {
+        _context = context;
+    }
 
 
     // This endpoint returns a list of all books in the collection.
     [HttpGet]
     public ActionResult<List<Book>> GetBooks()
     {
-        return books;
+        return _context.Books.ToList();
     }
 
 
@@ -22,7 +30,7 @@ public class BooksController : ControllerBase
     [HttpGet("{id}")]
     public ActionResult<Book> GetBook(int id)
     {
-        var book = books.FirstOrDefault(b => b.Id == id);
+        var book = _context.Books.FirstOrDefault(b => b.Id == id);
 
         if (book == null)
         {
@@ -37,7 +45,8 @@ public class BooksController : ControllerBase
     [HttpPost]
     public ActionResult<Book> CreateBook(Book book)
     {
-        books.Add(book);
+        _context.Books.Add(book);
+        _context.SaveChanges();
 
         return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
     }
@@ -47,7 +56,7 @@ public class BooksController : ControllerBase
     [HttpPut("{id}")]
     public IActionResult UpdateBook(int id, Book updatedBook)
     {
-        var book = books.FirstOrDefault(b => b.Id == id);
+        var book = _context.Books.FirstOrDefault(b => b.Id == id);
 
         if (book == null)
         {
@@ -56,7 +65,8 @@ public class BooksController : ControllerBase
 
         book.Title = updatedBook.Title;
         book.Author = updatedBook.Author;
-
+        
+        _context.SaveChanges();
         return NoContent();
     }
 
@@ -65,14 +75,15 @@ public class BooksController : ControllerBase
     [HttpDelete("{id}")]
     public IActionResult DeleteBook(int id)
     {
-        var book = books.FirstOrDefault(b => b.Id == id);
+        var book = _context.Books.FirstOrDefault(b => b.Id == id);
 
         if (book == null)
         {
             return NotFound();
         }
 
-        books.Remove(book);
+        _context.Books.Remove(book);
+        _context.SaveChanges();
 
         return NoContent();
     }
