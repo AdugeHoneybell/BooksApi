@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using BooksApi.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using BooksApi.Services;
 
 //  create a builder for the web application using the provided command-line arguments.
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Register Service
+builder.Services.AddScoped<IBooksService, BooksService>();
+
 
 // Swagger
 builder.Services.AddEndpointsApiExplorer();

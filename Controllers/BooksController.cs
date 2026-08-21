@@ -1,5 +1,5 @@
-﻿using BooksApi.Infrastructure;
-using BooksApi.Models;
+﻿using BooksApi.Models;
+using BooksApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BooksApi.Controllers;
@@ -9,28 +9,29 @@ namespace BooksApi.Controllers;
 public class BooksController : ControllerBase
 {
     // The controller uses dependency injection to get an instance of the AppDbContext.
-    private readonly AppDbContext _context;
+    private readonly IBooksService _booksService;
 
 
-    public BooksController(AppDbContext context)
+    public BooksController(IBooksService booksService)
     {
-        _context = context;
+        _booksService = booksService;
     }
 
 
     // This endpoint returns a list of all books in the collection.
     [HttpGet]
-    public ActionResult<List<Book>> GetBooks()
+    public async Task<ActionResult<List<Book>>> GetBooks()
     {
-        return _context.Books.ToList();
+        var books = await _booksService.GetBooksAsync();
+        return Ok(books);
     }
 
 
     // This endpoint returns a specific book by its ID.
     [HttpGet("{id}")]
-    public ActionResult<Book> GetBook(int id)
+    public async Task<ActionResult<Book>> GetBook(int id)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == id);
+        var book = await _booksService.GetBookAsync(id);
 
         if (book == null)
         {
@@ -43,47 +44,43 @@ public class BooksController : ControllerBase
 
     // This endpoint creates a new book and adds it to the collection.
     [HttpPost]
-    public ActionResult<Book> CreateBook(Book book)
+    public async Task<ActionResult<Book>> CreateBook(Book book)
     {
-        _context.Books.Add(book);
-        _context.SaveChanges();
+        var createdBook = await _booksService.CreateBookAsync(book);
 
-        return CreatedAtAction(nameof(GetBook), new { id = book.Id }, book);
+        return CreatedAtAction(
+            nameof(GetBook),
+            new { id = createdBook.Id },
+            createdBook
+        );
     }
 
 
     // This endpoint updates an existing book by its ID.
     [HttpPut("{id}")]
-    public IActionResult UpdateBook(int id, Book updatedBook)
+    public async Task<IActionResult> UpdateBook(int id, Book updatedBook)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == id);
+        var updated = await _booksService.UpdateBookAsync(id, updatedBook);
 
-        if (book == null)
+        if (!updated)
         {
             return NotFound();
         }
 
-        book.Title = updatedBook.Title;
-        book.Author = updatedBook.Author;
-        
-        _context.SaveChanges();
         return NoContent();
     }
 
 
     // This endpoint deletes a book by its ID.
     [HttpDelete("{id}")]
-    public IActionResult DeleteBook(int id)
+    public async Task<IActionResult> DeleteBook(int id)
     {
-        var book = _context.Books.FirstOrDefault(b => b.Id == id);
+        var deleted = await _booksService.DeleteBookAsync(id);
 
-        if (book == null)
+        if (!deleted)
         {
             return NotFound();
         }
-
-        _context.Books.Remove(book);
-        _context.SaveChanges();
 
         return NoContent();
     }
