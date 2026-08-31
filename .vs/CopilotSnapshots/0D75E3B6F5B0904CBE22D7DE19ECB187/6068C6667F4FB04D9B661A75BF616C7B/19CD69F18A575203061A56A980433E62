@@ -1,0 +1,88 @@
+﻿using BooksApi.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+
+namespace BooksApi.Controllers;
+
+/// <summary>
+/// Controller that handles user authentication endpoints such as
+/// registration and login. Uses an <see cref="IAuthService"/> to
+/// perform the actual authentication logic.
+/// </summary>
+[ApiController]
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
+{
+    // The ASP.NET Core identity user manager. Present in case controller
+    // needs to perform identity-related operations directly in the future.
+    private readonly UserManager<IdentityUser> _userManager;
+
+    // Service responsible for authentication operations (register, login,
+    // token generation). Abstracted behind an interface for testability.
+    private readonly IAuthService _authService;
+
+    /// <summary>
+    /// Creates a new instance of <see cref="AuthController"/>.
+    /// </summary>
+    /// <param name="userManager">UserManager for IdentityUser operations.</param>
+    /// <param name="authService">Authentication service implementing business logic.</param>
+    public AuthController(UserManager<IdentityUser> userManager, IAuthService authService)
+    {
+        _userManager = userManager;
+        _authService = authService;
+    }
+
+    /// <summary>
+    /// Registers a new user with the provided username, email and password.
+    /// Returns 200 OK when registration succeeds or 400 Bad Request with
+    /// error details when registration fails.
+    /// </summary>
+    /// <param name="request">Registration request containing username, email and password.</param>
+    [HttpPost("register")]
+    public async Task<IActionResult> Register(RegisterRequest request)
+    {
+        // Delegate registration logic to the authentication service which
+        // encapsulates validation and user creation using Identity.
+        var (succeeded, errors) = await _authService.RegisterAsync(request.Username, request.Email, request.Password);
+
+        if (!succeeded)
+            return BadRequest(errors);
+
+        return Ok("User registered successfully");
+    }
+
+    /// <summary>
+    /// Authenticates a user and returns a JWT token when successful.
+    /// Returns 401 Unauthorized when credentials are invalid.
+    /// </summary>
+    /// <param name="request">Login request containing username and password.</param>
+    [HttpPost("login")]
+    public async Task<IActionResult> Login(LoginRequest request)
+    {
+        // LoginAsync returns a tuple indicating whether authentication
+        // succeeded and the generated token (if any).
+        var (succeeded, token) = await _authService.LoginAsync(request.Username, request.Password);
+
+        if (!succeeded)
+            return Unauthorized("Invalid username or password");
+
+        // Return the token in a simple anonymous object. The client can
+        // extract the token and use it for authenticated requests.
+        return Ok(new { token });
+    }
+}
+
+/// <summary>
+/// Request payload for registering a new user.
+/// </summary>
+/// <param name="Username">Desired username.</param>
+/// <param name="Email">User email address.</param>
+/// <param name="Password">User password.</param>
+public record RegisterRequest(string Username, string Email, string Password);
+
+/// <summary>
+/// Request payload for logging in an existing user.
+/// </summary>
+/// <param name="Username">User's username.</param>
+/// <param name="Password">User's password.</param>
+public record LoginRequest(string Username, string Password);

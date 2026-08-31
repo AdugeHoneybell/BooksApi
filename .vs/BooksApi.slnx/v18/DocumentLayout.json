@@ -1,0 +1,177 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\services\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\services\\ibooksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\services\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\services\\booksservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\infrastructure\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\migrations\\20260828172704_addidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\migrations\\20260828172704_addidentitytables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|c:\\users\\aduge\\projects\\c#\\booksapi\\booksapi\\booksapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{6064A6A8-FE6C-362E-5908-62507C0F248D}|BooksApi\\BooksApi.csproj|solutionrelative:booksapi\\booksapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\IAuthService.cs",
+              "RelativeToolTip": "BooksApi\\Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T09:08:09.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBooksService.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\IBooksService.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Services\\IBooksService.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\IBooksService.cs",
+              "RelativeToolTip": "BooksApi\\Services\\IBooksService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T09:07:59.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BooksApi",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\BooksApi.csproj",
+              "RelativeDocumentMoniker": "BooksApi\\BooksApi.csproj",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\BooksApi.csproj",
+              "RelativeToolTip": "BooksApi\\BooksApi.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-08-31T08:22:40.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Program.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Program.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Program.cs",
+              "RelativeToolTip": "BooksApi\\Program.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAAAEQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-31T07:57:55.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20260828172704_AddIdentityTables.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Migrations\\20260828172704_AddIdentityTables.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Migrations\\20260828172704_AddIdentityTables.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Migrations\\20260828172704_AddIdentityTables.cs",
+              "RelativeToolTip": "BooksApi\\Migrations\\20260828172704_AddIdentityTables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T17:27:04.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Infrastructure\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Infrastructure\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Infrastructure\\AppDbContext.cs",
+              "RelativeToolTip": "BooksApi\\Infrastructure\\AppDbContext.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T13:42:43.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BooksService.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\BooksService.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Services\\BooksService.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\BooksService.cs",
+              "RelativeToolTip": "BooksApi\\Services\\BooksService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T07:30:17.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "BooksApi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAwwA0AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T07:28:54.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "BooksApi\\Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\aduge\\Projects\\C#\\BooksApi\\BooksApi\\Services\\AuthService.cs",
+              "RelativeToolTip": "BooksApi\\Services\\AuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-28T06:58:53.946Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
